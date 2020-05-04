@@ -1,0 +1,145 @@
+/* importaiton de la police ZCOOL */
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
+
+/* mini reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* DÉFINITION DES PROPRIÉTÉ COMMUNES A LA PAGE */
+body{
+    background-color: #2c3e50;
+    font-family: 'ZCOOL KuaiLe', serif;
+    color: white;
+    text-align: center
+}
+
+/* BARRE GRISE POUR LE TITRE DE LA PAGE */
+header{
+    background-color: #ecf0f1;
+    padding: 20px;
+}
+
+/* CHANGEMENT COULEUR DU TITRE DE LA PAGE ET DE LA TAILLE DU TEXTE */
+header>h1{
+    color: #2c3e50;
+    font-size: 50px;
+}
+
+/* MISE EN FORME DU PANNEAU DE SCORE
+    MARGE DE 2PX EN HAUT ET EN BAS, CENTRAGE HOTISONTALE DE LA BOITE
+    BORDURE DE 3PX CONTINUE EN BLANC CASSÉ
+    LARGEUR DE LA BOITE DE 200PX
+    BORDURE ARRONDI DANS LES 4 ANGLES AVE UN RAYON DE 4PX
+    TAIILE DE LA POLICE DE 46PX
+    "MARGE" INTERIEUR DE 15PX EN HAUT ET EN BAS, ET 20 PX SUR LES COTÉS
+    POSITION DE RÉFÉRANCE POUR LES ENFANTS
+*/
+.score-board{
+    margin: 20px auto;
+    border: 3px solid #ecf0f1;
+    width: 200px;
+    border-radius: 4px;
+    font-size: 46px;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/*
+COULEUR ARRIÈRE PLANS ROUGE
+TAILLE DE LA POLICE 14PX
+MARGE INTERIEUR 2PX HAUT/BAS ET 10PX GAUCHE/DROITE
+*/
+.badge{
+    background-color: #c0392b;
+    font-size: 14px;
+    padding: 2px 10px;
+}
+
+/*
+POSITION PAR RAPPOT AU PARENT .score-bord
+A -4 PX DU BORD BAS ET -4 DE LA GAUCHE
+ANGLE BAS GAUCHE ARRONDI AVEC UN RAYON DE 4PX
+*/
+#user-label{
+    position: absolute;
+    bottom: -4px;
+    left: -4px;
+    border-radius: 0 0 0 4px;
+}
+
+/*
+POSITION PAR RAPPOT AU PARENT .score-bord
+A -4 PX DU HAUT BAS ET -4 DE LA DROITE
+ANGLE HAUT DROIT ARRONDI AVEC UN RAYON DE 4PX
+*/
+#computer-label{
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    border-radius: 0 4px 0 0;
+}
+
+.resultat{
+    font-size: 46px;
+}
+
+/*
+MARGE EXTERIEUR HAUTE DE 50PX
+*/
+.jeu{
+    margin-top: 50px;
+}
+
+/*
+ON CACHE DE QUI DÉPACE
+ON AFFICHE TOUT LES CHOIX EN LIGNE
+TAIILE DE LA "BOITE" CHOIX 208PX PAR 208PX
+MARGE EXTERIEUR DE 20 PX A DROITE ET GAUCHE SEULEMENT
+TRANSITION DE 0,3SECONDE QUAND LE STYLE CHANGE
+*/
+.choix{
+    border: 4px solid #ecf0f1;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    height: 208px;
+    width: 208px;
+    margin: 0 20px;
+    transition-delay: 0.3s;
+}
+
+.choix > img{
+    height: 200px;
+    width: 200px;
+}
+
+/*
+:HOVER (SURVOL AVEC LA SOURIE)
+ON CHANGE LE CUSEUR EN MAIN 
+ET ON MET UNE OMBRE BLEU AUTOUR DE LA BOITE
+*/
+.choix:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 0px #3498db;
+}
+
+#message{
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+/* DEFINITION DE BORDUR DE COULEUR */
+.green-ring{
+    border: 4px solid #2ecc71 !important;
+}
+
+.red-ring{
+    border: 4px solid #e74c3c !important;
+}
+
+.gray-ring{
+    border: 4px solid #ecf0f1 !important;
+}
